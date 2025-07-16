@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #001F3F; /* dark blue fallback */
+  color: goldenrod;
+  margin: 0;
+  padding: 0;
+}
+input, textarea {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+/* Add to global.css or inside your component <style> */
+:deep(a:visited) {
+  color: inherit !important;
+}
