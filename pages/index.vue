@@ -117,7 +117,7 @@
       </p>
 
       <h2 class="text-5xl md:text-6xl mt-4 font-greatvibes text-white drop-shadow-xl animate-fadeInUp delay-300">
-        A & B
+        Bride's Name & Groom's Name
       </h2>
 
       <p class="mt-4 text-sm italic animate-fadeInUp delay-400">

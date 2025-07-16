@@ -26,17 +26,17 @@
         </template>
 
         <template v-else-if="currentSlide === 1">
-          <h2 class="text-xl font-bold">Rosmaidayu & Ahmad Firdaus</h2>
+          <h2 class="text-xl font-bold">Bride's Name & Groom's Name</h2>
           <p class="text-sm text-gray-500">Bride & Groom</p>
         </template>
 
         <template v-else-if="currentSlide === 2">
           <div>
             <p class="font-semibold text-primary">Bride-to-be:</p>
-            <p class="font-bold">Hidayah Binti Ismail</p>
+            <p class="font-bold">Bride's Full Name</p>
             <p class="text-sm text-gray-500">
               Daughter of:<br />
-              Tuan Haji Ismail Bin [Father’s Name]<br />
+              Tuan Haji [Father’s Name]<br />
               & Puan Hajjah [Mother’s Name]
             </p>
           </div>
@@ -45,11 +45,11 @@
 
           <div>
             <p class="font-semibold text-primary">Groom-to-be:</p>
-            <p class="font-bold">Ahmad Firdaus Bin Abdullah</p>
+            <p class="font-bold">Groom's Full Name</p>
             <p class="text-sm text-gray-500">
               Son of:<br />
-              Encik Abdullah Bin [Father-in-law’s Name]<br />
-              & Puan Zainab Binti [Mother-in-law’s Name]
+              Encik [Father-in-law’s Name]<br />
+              & Puan [Mother-in-law’s Name]
             </p>
           </div>
         </template>
