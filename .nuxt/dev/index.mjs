@@ -1,5 +1,5 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, getQuery as getQuery$2, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getResponseStatusText } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getRouterParam, getResponseStatusText } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
@@ -14,7 +14,7 @@ import { createFetch, Headers as Headers$1 } from 'file:///Users/rosmaidayubinti
 import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/node-mock-http/dist/index.mjs';
 import { createStorage, prefixStorage } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/unstorage/dist/index.mjs';
 import unstorage_47drivers_47fs from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/ohash/dist/index.mjs';
+import { digest, hash as hash$1 } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/ohash/dist/index.mjs';
 import { klona } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/klona/dist/index.mjs';
 import defu, { defuFn } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/defu/dist/defu.mjs';
 import { snakeCase } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/scule/dist/index.mjs';
@@ -29,11 +29,8 @@ import { AsyncLocalStorage } from 'node:async_hooks';
 import { stringify, uneval } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/devalue/index.js';
 import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/errx/dist/index.js';
 import { isVNode, toValue, isRef } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/vue/index.mjs';
-import { basename } from 'file:///Users/rosmaidayubintiismail/node_modules/pathe/dist/index.mjs';
-import { getIcons } from 'file:///Users/rosmaidayubintiismail/node_modules/@iconify/utils/lib/index.mjs';
-import { hash as hash$1 } from 'file:///Users/rosmaidayubintiismail/node_modules/ohash/dist/index.mjs';
-import { getQuery as getQuery$1, createError as createError$1 } from 'file:///Users/rosmaidayubintiismail/node_modules/h3/dist/index.mjs';
-import { consola as consola$2 } from 'file:///Users/rosmaidayubintiismail/node_modules/consola/dist/index.mjs';
+import { basename } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/pathe/dist/index.mjs';
+import { getIcons } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/@iconify/utils/lib/index.mjs';
 import { collections } from 'file:///Users/rosmaidayubintiismail/wedding-invite/.nuxt/nuxt-icon-server-bundle.mjs';
 import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/unhead/dist/server.mjs';
 import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///Users/rosmaidayubintiismail/wedding-invite/node_modules/unhead/dist/plugins.mjs';
@@ -1365,7 +1362,7 @@ function onConsoleLog(callback) {
 
 const script = "\"use strict\";(()=>{const t=window,e=document.documentElement,c=[\"dark\",\"light\"],n=getStorageValue(\"localStorage\",\"nuxt-color-mode\")||\"system\";let i=n===\"system\"?u():n;const r=e.getAttribute(\"data-color-mode-forced\");r&&(i=r),l(i),t[\"__NUXT_COLOR_MODE__\"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=\"\"+o+\"\",a=\"\";e.classList?e.classList.add(s):e.className+=\" \"+s,a&&e.setAttribute(\"data-\"+a,o)}function d(o){const s=\"\"+o+\"\",a=\"\";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,\"g\"),\"\"),a&&e.removeAttribute(\"data-\"+a)}function f(o){return t.matchMedia(\"(prefers-color-scheme\"+o+\")\")}function u(){if(t.matchMedia&&f(\"\").media!==\"not all\"){for(const o of c)if(f(\":\"+o).matches)return o}return\"light\"}})();function getStorageValue(t,e){switch(t){case\"localStorage\":return window.localStorage.getItem(e);case\"sessionStorage\":return window.sessionStorage.getItem(e);case\"cookie\":return getCookie(e);default:return null}}function getCookie(t){const c=(\"; \"+window.document.cookie).split(\"; \"+t+\"=\");if(c.length===2)return c.pop()?.split(\";\").shift()}";
 
-const _1GH0XFo0yp0lEVsekkEKXkKBPsDzRbRlwhRcdYeOODs = (function(nitro) {
+const _N5H3v9JiX92X_b8zV68D0J7Ox7TSE52a6Yna6xWMgNA = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
@@ -1374,7 +1371,7 @@ const _1GH0XFo0yp0lEVsekkEKXkKBPsDzRbRlwhRcdYeOODs = (function(nitro) {
 const plugins = [
   _g6hJwMiigj9TWDyJ1oMvPItlp5sUth9sb8nFtaiAY,
 _HEY2j0mmV4_EluiVuO0Z5QenKrIQtuppWFJETIDqYkA,
-_1GH0XFo0yp0lEVsekkEKXkKBPsDzRbRlwhRcdYeOODs
+_N5H3v9JiX92X_b8zV68D0J7Ox7TSE52a6Yna6xWMgNA
 ];
 
 function defineRenderHandler(render) {
@@ -1467,10 +1464,10 @@ function publicAssetsURL(...path) {
 
 const warnOnceSet = /* @__PURE__ */ new Set();
 const DEFAULT_ENDPOINT = "https://api.iconify.design";
-const _E_jmss = defineCachedEventHandler(async (event) => {
+const _fehsnr = defineCachedEventHandler(async (event) => {
   const url = getRequestURL(event);
   if (!url)
-    return createError$1({ status: 400, message: "Invalid icon request" });
+    return createError({ status: 400, message: "Invalid icon request" });
   const options = useAppConfig().icon;
   const collectionName = event.context.params?.collection?.replace(/\.json$/, "");
   const collection = collectionName ? await collections[collectionName]?.() : null;
@@ -1482,12 +1479,12 @@ const _E_jmss = defineCachedEventHandler(async (event) => {
         collection,
         icons
       );
-      consola$2.debug(`[Icon] serving ${(icons || []).map((i) => "`" + collectionName + ":" + i + "`").join(",")} from bundled collection`);
+      consola$1.debug(`[Icon] serving ${(icons || []).map((i) => "`" + collectionName + ":" + i + "`").join(",")} from bundled collection`);
       return data;
     }
   } else {
     if (collectionName && !warnOnceSet.has(collectionName) && apiEndPoint === DEFAULT_ENDPOINT) {
-      consola$2.warn([
+      consola$1.warn([
         `[Icon] Collection \`${collectionName}\` is not found locally`,
         `We suggest to install it via \`npm i -D @iconify-json/${collectionName}\` to provide the best end-user experience.`
       ].join("\n"));
@@ -1496,22 +1493,22 @@ const _E_jmss = defineCachedEventHandler(async (event) => {
   }
   if (options.fallbackToApi === true || options.fallbackToApi === "server-only") {
     const apiUrl = new URL("./" + basename(url.pathname) + url.search, apiEndPoint);
-    consola$2.debug(`[Icon] fetching ${(icons || []).map((i) => "`" + collectionName + ":" + i + "`").join(",")} from iconify api`);
+    consola$1.debug(`[Icon] fetching ${(icons || []).map((i) => "`" + collectionName + ":" + i + "`").join(",")} from iconify api`);
     if (apiUrl.host !== new URL(apiEndPoint).host) {
-      return createError$1({ status: 400, message: "Invalid icon request" });
+      return createError({ status: 400, message: "Invalid icon request" });
     }
     try {
       const data = await $fetch(apiUrl.href);
       return data;
     } catch (e) {
-      consola$2.error(e);
+      consola$1.error(e);
       if (e.status === 404)
-        return createError$1({ status: 404 });
+        return createError({ status: 404 });
       else
-        return createError$1({ status: 500, message: "Failed to fetch fallback icon" });
+        return createError({ status: 500, message: "Failed to fetch fallback icon" });
     }
   }
-  return createError$1({ status: 404 });
+  return createError({ status: 404 });
 }, {
   group: "nuxt",
   name: "icon",
@@ -1818,7 +1815,7 @@ async function getIslandContext(event) {
   const componentParts = url.substring("/__nuxt_island".length + 1).replace(ISLAND_SUFFIX_RE, "").split("_");
   const hashId = componentParts.length > 1 ? componentParts.pop() : void 0;
   const componentName = componentParts.join("_");
-  const context = event.method === "GET" ? getQuery$2(event) : await readBody(event);
+  const context = event.method === "GET" ? getQuery$1(event) : await readBody(event);
   const ctx = {
     url: "/",
     ...context,
@@ -1835,7 +1832,7 @@ const _lazy_Ba_mtC = () => Promise.resolve().then(function () { return renderer$
 
 const handlers = [
   { route: '/__nuxt_error', handler: _lazy_Ba_mtC, lazy: true, middleware: false, method: undefined },
-  { route: '/api/_nuxt_icon/:collection', handler: _E_jmss, lazy: false, middleware: false, method: undefined },
+  { route: '/api/_nuxt_icon/:collection', handler: _fehsnr, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '/_fonts/**', handler: _lazy_Ba_mtC, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_Ba_mtC, lazy: true, middleware: false, method: undefined }
@@ -2019,7 +2016,7 @@ nitroApp.router.use(
   defineEventHandler(async (event) => {
     const name = getRouterParam(event, "name");
     const payload = {
-      ...getQuery$2(event),
+      ...getQuery$1(event),
       ...await readBody(event).then((r) => r?.payload).catch(() => ({}))
     };
     return await runTask(name, { payload });
@@ -2141,7 +2138,7 @@ const APP_TELEPORT_CLOSE_TAG = HAS_APP_TELEPORTS ? `</${appTeleportTag}>` : "";
 const PAYLOAD_URL_RE = /^[^?]*\/_payload.json(?:\?.*)?$/ ;
 const renderer = defineRenderHandler(async (event) => {
   const nitroApp = useNitroApp();
-  const ssrError = event.path.startsWith("/__nuxt_error") ? getQuery$2(event) : null;
+  const ssrError = event.path.startsWith("/__nuxt_error") ? getQuery$1(event) : null;
   if (ssrError && !("__unenv__" in event.node.req)) {
     throw createError({
       statusCode: 404,

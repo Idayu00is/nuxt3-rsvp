@@ -12,6 +12,26 @@
         </svg>
       </div>
     </div>
+
+    <!-- Warning Popup -->
+    <!-- <div v-if="showWarning" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+      <UCard class="max-w-sm w-full bg-red-600 text-white shadow-xl border border-red-300">
+        <template #header>
+          <div class="flex items-center gap-2 text-lg font-semibold">
+            ⚠️ Incomplete Form
+          </div>
+        </template>
+        <p class="text-sm">Please complete all fields before submitting.</p>
+        <template #footer>
+          <div class="text-right">
+            <UButton size="sm" color="white" variant="solid" @click="showWarning = false">
+              OK
+            </UButton>
+          </div>
+        </template>
+      </UCard>
+    </div> -->
+
     <UContainer class="max-w-xl w-full animate-fadeInUp">
       <!-- Title -->
       <div class="text-center space-y-2">
@@ -137,6 +157,25 @@
         </div>
       </div>
     </UContainer>
+
+    <!-- Custom Popup -->
+    <div
+      v-if="showWarning"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
+    >
+      <div class="bg-[#0b2a4d]/90 text-yellow-300 borde rounded-xl shadow-xl px-6 py-4 max-w-md w-full mx-4 animate-fadeIn">
+        <div class="text-lg font-bold mb-2 flex items-center gap-2">
+          ⚠️ Incomplete Form
+        </div>
+        <p class="text-sm">Please complete all fields before submitting.</p>
+        <div class="text-right mt-4">
+          <UButton size="sm" color="yellow" variant="soft" @click="showWarning = false">
+            OK
+          </UButton>
+        </div>
+      </div>
+    </div>
+
   </section>
 </template>
 
@@ -145,6 +184,8 @@ import { ref } from 'vue'
 import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, addDoc } from 'firebase/firestore'
 import { useRuntimeConfig } from '#imports'
+
+const showWarning = ref(false)
 
 const config = useRuntimeConfig().public
 
@@ -168,7 +209,84 @@ const dietary = ref('')
 const doa = ref('')
 const submitted = ref(false)
 
+// const submitForm = async () => {
+//   try {
+//     await addDoc(collection(db, 'rsvps'), {
+//       name: name.value,
+//       attending: attending.value,
+//       guestCount: guestCount.value,
+//       specialSeating: specialSeating.value,
+//       dietary: dietary.value,
+//       doa: doa.value,
+//       submittedAt: new Date().toISOString()
+//     })
+//     submitted.value = true
+//     name.value = ''
+//     attending.value = 'Yes'
+//     guestCount.value = 1
+//     specialSeating.value = null
+//     dietary.value = ''
+//     doa.value = ''
+//   } catch (error) {
+//     alert('Something went wrong. Please try again.')
+//     console.error(error)
+//   }
+// }
+
+// const submitForm = async () => {
+//   // Simple validation check
+//   if (
+//     !name.value.trim() ||
+//     !attending.value ||
+//     !guestCount.value ||
+//     specialSeating.value === null ||
+//     !dietary.value.trim() ||
+//     !doa.value.trim()
+//   ) {
+//     alert('Please complete all fields before submitting.')
+//     return
+//   }
+
+//   try {
+//     await addDoc(collection(db, 'rsvps'), {
+//       name: name.value,
+//       attending: attending.value,
+//       guestCount: guestCount.value,
+//       specialSeating: specialSeating.value,
+//       dietary: dietary.value,
+//       doa: doa.value,
+//       submittedAt: new Date().toISOString()
+//     })
+//     submitted.value = true
+
+//     // Clear form
+//     name.value = ''
+//     attending.value = 'Yes'
+//     guestCount.value = 1
+//     specialSeating.value = null
+//     dietary.value = ''
+//     doa.value = ''
+//   } catch (error) {
+//     alert('Something went wrong. Please try again.')
+//     console.error(error)
+//   }
+// }
+
 const submitForm = async () => {
+  if (
+    !name.value.trim() ||
+    !attending.value ||
+    !guestCount.value ||
+    specialSeating.value === null ||
+    !dietary.value.trim() ||
+    !doa.value.trim()
+  ) {
+    showWarning.value = true
+    return
+  }
+
+  showWarning.value = false
+
   try {
     await addDoc(collection(db, 'rsvps'), {
       name: name.value,
@@ -191,6 +309,7 @@ const submitForm = async () => {
     console.error(error)
   }
 }
+
 </script>
 
 <style scoped>

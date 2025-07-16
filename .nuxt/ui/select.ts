@@ -42,7 +42,7 @@ export default {
     "content": "max-h-60 w-(--reka-select-trigger-width) bg-default shadow-lg rounded-md ring ring-default overflow-hidden data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-select-content-transform-origin) pointer-events-auto flex flex-col",
     "viewport": "relative divide-y divide-default scroll-py-1 overflow-y-auto flex-1",
     "group": "p-1 isolate",
-    "empty": "py-2 text-center text-sm text-muted",
+    "empty": "text-center text-muted",
     "label": "font-semibold text-highlighted",
     "separator": "-mx-1 my-1 h-px bg-border",
     "item": [
@@ -80,7 +80,8 @@ export default {
         "itemLeadingAvatarSize": "3xs",
         "itemLeadingChip": "size-4",
         "itemLeadingChipSize": "sm",
-        "itemTrailingIcon": "size-4"
+        "itemTrailingIcon": "size-4",
+        "empty": "p-1 text-xs"
       },
       "sm": {
         "base": "px-2.5 py-1.5 text-xs gap-1.5",
@@ -95,7 +96,8 @@ export default {
         "itemLeadingAvatarSize": "3xs",
         "itemLeadingChip": "size-4",
         "itemLeadingChipSize": "sm",
-        "itemTrailingIcon": "size-4"
+        "itemTrailingIcon": "size-4",
+        "empty": "p-1.5 text-xs"
       },
       "md": {
         "base": "px-2.5 py-1.5 text-sm gap-1.5",
@@ -110,7 +112,8 @@ export default {
         "itemLeadingAvatarSize": "2xs",
         "itemLeadingChip": "size-5",
         "itemLeadingChipSize": "md",
-        "itemTrailingIcon": "size-5"
+        "itemTrailingIcon": "size-5",
+        "empty": "p-1.5 text-sm"
       },
       "lg": {
         "base": "px-3 py-2 text-sm gap-2",
@@ -125,7 +128,8 @@ export default {
         "itemLeadingAvatarSize": "2xs",
         "itemLeadingChip": "size-5",
         "itemLeadingChipSize": "md",
-        "itemTrailingIcon": "size-5"
+        "itemTrailingIcon": "size-5",
+        "empty": "p-2 text-sm"
       },
       "xl": {
         "base": "px-3 py-2 text-base gap-2",
@@ -140,7 +144,8 @@ export default {
         "itemLeadingAvatarSize": "xs",
         "itemLeadingChip": "size-6",
         "itemLeadingChipSize": "lg",
-        "itemTrailingIcon": "size-6"
+        "itemTrailingIcon": "size-6",
+        "empty": "p-2 text-base"
       }
     },
     "variant": {
