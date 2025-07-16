@@ -1,6 +1,18 @@
 <template>
   <section class="min-h-screen bg-[#061C36] text-yellow-300 flex items-center justify-center px-4 py-10">
-    <UContainer class="max-w-xl w-full">
+    <!-- Floating petals (same as index.vue) -->
+    <div aria-hidden="true" class="petals-container">
+      <div v-for="i in 20" :key="i" class="petal" :style="`--i:${i - 1};`">
+        <svg viewBox="0 0 64 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 0C47 32 48 64 32 96C17 64 16 32 32 0Z"
+            :fill="`rgba(255, 215, 0, ${0.4 + (i % 5) * 0.05})`"
+            :stroke="`rgba(255, 215, 0, ${0.7 + (i % 5) * 0.05})`"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+    </div>
+    <UContainer class="max-w-xl w-full animate-fadeInUp">
       <!-- Title -->
       <div class="text-center space-y-2">
         <h1 class="text-4xl font-bold tracking-wide">RSVP</h1>
@@ -184,5 +196,56 @@ const submitForm = async () => {
 <style scoped>
 :deep(a:visited) {
   color: inherit !important;
+}
+/* Fade animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+/* Petals animation */
+.petals-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.petal {
+  position: absolute;
+  width: 24px;
+  height: 36px;
+  top: 100%;
+  left: calc(var(--i) * 5vw);
+  animation: floatPetal 12s linear infinite;
+  animation-delay: calc(var(--i) * -1.2s);
+  transform-origin: center bottom;
+  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.8));
+}
+.petal svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@keyframes floatPetal {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 </style>
