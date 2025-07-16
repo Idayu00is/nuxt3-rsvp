@@ -140,17 +140,17 @@ declare module 'nuxt/schema' {
    },
   }
   interface PublicRuntimeConfig {
-   FIREBASE_API_KEY: string,
+   firebaseApiKey: string,
 
-   FIREBASE_AUTH_DOMAIN: string,
+   firebaseAuthDomain: string,
 
-   FIREBASE_PROJECT_ID: string,
+   firebaseProjectId: string,
 
-   FIREBASE_STORAGE_BUCKET: string,
+   firebaseStorageBucket: string,
 
-   FIREBASE_MESSAGING_SENDER_ID: string,
+   firebaseMessagingSenderId: string,
 
-   FIREBASE_APP_ID: string,
+   firebaseAppId: string,
   }
 }
 declare module 'vue' {

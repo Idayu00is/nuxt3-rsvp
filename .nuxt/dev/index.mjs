@@ -882,12 +882,12 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
-    "FIREBASE_API_KEY": "AIzaSyD7i225X_RdB4qXthZCaE_n3FFTHeK4O-A",
-    "FIREBASE_AUTH_DOMAIN": "wedding-invite-61ca4.firebaseapp.com",
-    "FIREBASE_PROJECT_ID": "wedding-invite-61ca4",
-    "FIREBASE_STORAGE_BUCKET": "wedding-invite-61ca4.firebasestorage.app",
-    "FIREBASE_MESSAGING_SENDER_ID": "381165593011",
-    "FIREBASE_APP_ID": "1:381165593011:web:bfd182d6152af4242c6bc6"
+    "firebaseApiKey": "AIzaSyD7i225X_RdB4qXthZCaE_n3FFTHeK4O-A",
+    "firebaseAuthDomain": "wedding-invite-61ca4.firebaseapp.com",
+    "firebaseProjectId": "wedding-invite-61ca4",
+    "firebaseStorageBucket": "wedding-invite-61ca4.firebasestorage.app",
+    "firebaseMessagingSenderId": "381165593011",
+    "firebaseAppId": "1:381165593011:web:bfd182d6152af4242c6bc6"
   },
   "icon": {
     "serverKnownCssClasses": []
